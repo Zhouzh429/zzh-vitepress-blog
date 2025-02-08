@@ -1,5 +1,8 @@
 import { defineConfig } from "vitepress";
 
+// 头部导航
+import topNav from "./topNav";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-demo/",
@@ -12,11 +15,7 @@ export default defineConfig({
   themeConfig: {
     logo: "/logo.jpg",
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "学习内容", link: "/learning-content" },
-      { text: "个人履历", link: "/personal-resume" },
-    ],
+    nav: topNav,
 
     sidebar: [
       {
